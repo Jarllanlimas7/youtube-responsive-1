@@ -1,0 +1,632 @@
+
+        /*  goolge fontes  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap');
+
+*{       /*  recet   */                       
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth ;
+    font-family: "Roboto", sans-serif;
+}
+
+
+h1{   
+    font-size: 1.5rem;  /* fonte em rem  */
+   
+}
+
+
+h4{      /* cor dos itens   */
+    font-size: .9rem;
+    text-transform: uppercase;
+    color: rgb(117, 117, 117);
+    margin-left: 20px;
+}
+
+
+i{     /*    */
+    font-size: 1.5rem;
+    color: rgb(179, 164, 152);
+}
+
+
+p,a{   /*    */
+    font-size: .9rem;
+}
+
+
+hr{       /*    */
+    border:  1px solid  rgba(240, 237, 237, 0.1);
+    margin: 12px 0;
+}
+
+/* scrollbar style */
+
+::-webkit-scrollbar { /* tirou a barrra de rolagem esquerda */
+    width: 8px;
+}
+
+::-webkit-scrollbar-track { /* rolagens escura */
+    background:none;
+}
+
+::-webkit-scrollbar-thumb { /* rolagens claras */
+    background: transparent;
+    border-radius: 5px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb{ /* rolagens aparece quando clica */
+    background: #7c4c4c;
+}
+
+::-webkit-scrollbar-thumb:hover{  /* rolagens esquerda */
+    background:#794d4d;
+}
+/* header start here */
+.header{     /* barra do menu  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:#212121 ;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 25px ;
+    padding-right: 40px;  
+    
+}
+
+.logo-img {   /* tamanho da logo  menu */
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+img{    /* tamanho menu logo  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% ;  
+    object-fit: cover; 
+}
+
+#logo-txt{    /* nome da logo  */
+    letter-spacing: -1,5px ;
+    color: rgb(255, 255, 255);
+   
+}
+     
+.logo{ /* nome do lado centro  */
+    display: flex;
+    align-items: center;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    flex: 0 1 685px;
+    margin-left: 40px;   
+}
+
+.search-container form{  /* img lado direito  */
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-container input{ /* pesquisa  */
+    height: 40px ;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color:  #353434;
+    border: 1px solid rgba(255, 255, 244, 0.1);
+    padding: 12px;
+    color: rgb(88, 88, 88);
+    font-size: 1rem;
+    border-radius: 30px;
+}
+
+.search { /*lupa img  */
+    min-width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    background-color: #353434;
+    outline:none ;
+    border: none;
+    align-items: center;
+    border-radius: 20%;
+}
+
+.mic{   /* microfone*/
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #353434;
+}
+
+.profile-container{ 
+    display: flex; /* um lado do outro*/
+    align-items: center; /* centro */   
+}
+
+.profile-container i{
+    margin-left: 25px;  /* espaco entre*/ 
+}
+
+.profile-box{
+    position: relative; 
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden; /*circulo*/
+    margin-left: 25px; /* espaco entre*/   
+}
+
+/* body container esquerdo*/
+
+.body-container{ /*casinha */
+    display: flex;
+    position: fixed;
+    height: calc(100vh - 60px);
+    top: 60px;
+}
+
+.sidebar{ /*cor da coluna esquerda */
+    background-color:#212121 ;
+    padding-top: 10px;
+    width: 240px;
+    overflow-y: scroll ;     
+}
+
+.sidebar a{ /*cor da casinha*/
+   text-decoration: none; /*tira a linha do link*/
+   color: #ffffff;    
+}
+
+
+.sidebar-items{
+    display: flex;
+    flex-direction: column;/* deichar em colunas */
+}
+
+.sidebar-item{   /* icones alinhados esquerdo */
+   display: flex;  /* lado do outro  */
+   align-items: center; /*no centro  */
+   padding: 0 24px;
+   cursor: pointer; /*curso de ceta ceta  */
+   height: 40px;
+}
+
+.sidebar-item:hover{ /*destaqui do click   */
+   background-color:#ec0c0c ; 
+  border-radius: 15px;
+}
+
+.sidebar-item i{
+    margin-right: 24px;
+}
+
+/*MAIN CONTENT START HERE  */
+.content{
+    width: calc(100vw - 240px);
+}
+
+.chips-wrapper{
+    overflow-x: scroll;
+    background-color: #212121;
+    display: flex;
+    padding-left: 14px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #424242;   /*rolangem em sima*/
+}
+
+.chips-wrapper::-webkit-scrollbar{
+    height: 0;
+}
+
+.chip{
+    margin: 12px 6px;
+    background-color: #353434;
+    padding: 6px 12px;
+    border:1px solid #6b6969;
+    border-radius: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #ffffff;
+    transition:  .5s ;
+    }
+
+    .chip:hover{ /* fundo favorito  */
+        background-color: #bb7474;
+    }
+
+    /*   CONTAINER  dos VIDEOS  */ 
+
+    .video-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);   /*colunas e linhas*/
+        grid-gap:18px;
+        padding: 20px 25px ;
+        background-color: #242323; /*background*/
+        overflow-y: scroll;
+        height: calc(100vh - 116px);     
+    }
+
+    .video-content-cover{
+        position: relative;
+        transition: .5s;
+        transition-delay: .5s ;       
+    }
+
+    .video-content-cover:hover{
+        transform: translateY(60px);
+        z-index: 999;
+    }
+
+
+    .video-content-cover:nth-child(4n+1):hover{
+        transform: translate(50px 60px);
+        z-index: 999;
+    }
+
+
+    .video-content-cover:nth-child(4n+1):hover{
+        transform: translate(30px 60px);
+        z-index: 999;
+        }
+
+
+
+    .video-content{
+        margin-bottom: 25px;
+        position: relative;
+        transition: .5s ;
+        width: 100%;
+    }
+
+    .video-content:hover{ /*--informaçoes vizualizaçao  --*/
+        transform: scale(1.5); /*-- movimento do video --*/
+        z-index: 5;
+        position: absolute;
+        box-shadow: 0 4px 8px 0 rgb(69, 69, 68);
+        background-color: #fff34b37; /*--sonbra do video  --*/
+    }
+
+    .video-content:hover .video-details{
+        background-color:rgb(66, 66, 66) ;/*--sonbra do video  --*/
+        padding: 10px;
+    }
+
+
+    .video-box {    /*--videos postados    --*/
+        position: relative;
+        width: auto;
+        height: 145px; 
+        display: block; 
+        margin: 5px;
+    }
+    
+    .chanel-logo {    /*-- logo dos canais   --*/
+      position: relative;  
+      min-width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .video-content:hover .chanel-logo{
+        min-width: 25px ;
+        height: 25px;
+    }
+
+    .video-details{  /*--  informaçoes embaico do video  --*/
+        display: flex;
+        color: #fafafa;
+        padding-top: 12px;
+    }
+  
+
+    .detail{
+        margin-left: 12px;  /*-- espaçp esquerdo--*/
+    }
+
+    .title{     /*--   --*/
+        font-size: .9rem; /*-- tamanho da fonte--*/
+    }
+
+    .video-content:hover.title{
+     font-size: .7rem;
+    }
+
+   
+    .channel-name{  /*-- tamanho do nome do canal  --*/
+        font-size:.8rem ;
+        margin-top: 10px;  /*-- espaco para baixo   --*/
+        color: #aa4242;   /*-- COR DO NOME DO CANAL  --*/
+    }
+
+    .views-upload{
+        display: flex;
+        font-size: .8rem;
+        color: #c2b370;
+    }
+
+
+    .video-content:hover .views-upload{
+        font-size:.6rem ;
+
+    }
+ 
+    .upload{ /*--   --*/
+        margin-left: 5px; /*-- espaço  --*/
+    }
+
+     .hidden-content{    /*-- apaga as linhas e icone  --*/
+        display: none;
+        padding: 5px 10px;
+
+     }
+
+     .video-content:hover .hidden-content{
+        display: block;
+     }
+
+     .btn{       
+        padding: 5px 0; 
+        color: #ffc609;
+        text-transform: uppercase;
+        width: 100%;
+        background-color: #424242;
+        text-align: center;
+        margin: 5px 0;
+        font-size: .6rem;
+        cursor: pointer;   /*-- dedinho  --*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+     }
+
+     .btn i{   /*-- icone--*/
+        font-size: .7rem;
+        margin-right: 5px;
+        color: #07fff7;
+     }
+     
+
+
+     /*-- responsive  --*/
+
+   
+ 
+
+
+    @media  (max-width: 1200px){
+        .sidebar{   
+            width: 70px;
+            overflow-x: hidden ;     
+        }
+
+        .more{
+            display: none;
+        }
+
+        .content{
+            width: calc(100vw - 70px);
+        }
+    }
+
+    @media (max-width: 1050px) {
+
+        .video-container{  
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 820px) {
+
+        .video-container{  
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .video-container{  
+            grid-template-columns: 1fr;
+        }
+
+        .search-container,.ri-grid-fill {
+            display: none;
+
+        }
+
+        .video-container{
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .header{
+            padding-right: 10px;
+        }
+
+
+    }
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
